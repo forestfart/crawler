@@ -34,7 +34,7 @@ public class CrawlerStarter {
 				final Crawler c = new Crawler(url, new TextExtractor(), new ConsoleResultsPrinter());
 				c.addSentenceFinder(new SentenceByWordFinder("igrzysk"));
 				c.addSentenceFinder(new SentenceByWordFinder("koniec"));
-				c.run();
+				c.start();
 		});
 		
 		long endMillis = System.currentTimeMillis();

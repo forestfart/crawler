@@ -9,7 +9,7 @@ import org.jsoup.nodes.Document;
 
 
 
-public class Crawler {
+public class Crawler extends Thread {
 
 	protected String urlToProcess;	
 	protected TextExtractor textExtractor;
