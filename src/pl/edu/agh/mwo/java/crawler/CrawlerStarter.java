@@ -30,7 +30,7 @@ public class CrawlerStarter {
 		
 		long startMillis = System.currentTimeMillis();
 		
-		urlsToProcess.stream().forEach(url -> {
+		urlsToProcess.parallelStream().forEach(url -> {
 				final Crawler c = new Crawler(url, new TextExtractor(), new ConsoleResultsPrinter());
 				c.addSentenceFinder(new SentenceByWordFinder("igrzysk"));
 				c.addSentenceFinder(new SentenceByWordFinder("koniec"));
